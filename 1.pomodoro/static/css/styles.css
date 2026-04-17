@@ -1,0 +1,44 @@
+:root{
+  --primary-1:#6b6cf5;
+  --primary-2:#8f7af6;
+  --accent:#bda9ff;
+  --card-bg:#ffffff;
+  --muted:#9aa0b0;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: "Noto Sans JP", "Segoe UI", Roboto, Arial, sans-serif;
+  background: linear-gradient(180deg, #6b6cf5 0%, #8f7af6 100%);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+}
+.card{
+  width:360px;
+  background:var(--card-bg);
+  border-radius:20px;
+  padding:22px;
+  box-shadow: 0 20px 40px rgba(16,16,40,0.25);
+}
+.card-header h2{ margin:0; font-size:18px; color:#1f1f2e; }
+.timer-wrap{ text-align:center; padding:8px 0 4px; }
+.timer-status{ color:var(--muted); font-size:14px; margin-bottom:6px; }
+.timer-center{ position:relative; display:inline-block; }
+.progress-ring{ width:200px; height:200px; display:block; }
+.progress-ring circle{ fill:none; stroke-width:10; transform:rotate(-90deg); transform-origin:50% 50%; }
+.progress-ring .bg{ stroke:#f0f0f6; }
+.progress-ring .progress{ stroke:var(--primary-1); stroke-dasharray:283; stroke-dashoffset:283; stroke-linecap:round; transition: stroke-dashoffset 0.2s linear; }
+.time{ position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); font-size:36px; font-weight:800; color:#222; }
+.controls{ display:flex; justify-content:center; gap:12px; margin-top:16px; }
+.btn-primary{ padding:10px 22px; border-radius:28px; border:none; color:white; background:linear-gradient(90deg,var(--primary-1),var(--primary-2)); box-shadow: 0 8px 20px rgba(107,108,245,0.28); cursor:pointer; }
+.btn-primary:active{ transform:translateY(1px); }
+.btn-outline{ padding:8px 18px; border-radius:28px; border:2px solid rgba(107,108,245,0.18); background:white; color:var(--primary-1); cursor:pointer; }
+.stats-card{ margin-top:18px; background:#f3f0ff; padding:14px; border-radius:12px; }
+.stats-title{ font-size:14px; color:#333; margin-bottom:8px; }
+.stats-body{ display:flex; justify-content:space-between; align-items:center; }
+.stat{ text-align:center; }
+.stat .num{ font-size:20px; color:var(--primary-1); font-weight:700; }
+.stat .label{ font-size:12px; color:var(--muted); }
